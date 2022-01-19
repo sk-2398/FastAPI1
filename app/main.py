@@ -50,14 +50,14 @@ app.include_router(vote.router)
 
 
 
-@app.get("/")
-def root():
-    return {"message": "Hello suyog"}
+# @app.get("/")
+# def root():
+#     return {"message": "Hello suyog"}
 
-#creating get request /now is the url
-@app.get("/new")
-def get_post():
-    return {"message":"This is new page"}
+# #creating get request /now is the url
+# @app.get("/new")
+# def get_post():
+#     return {"message":"This is new page"}
 
 
 
@@ -76,10 +76,10 @@ def get_post():
 
 
 #creating post request
-@app.post("/create_post")
-def create_post(post: dict=Body(...)): #post:dict=Body(...) it fetch all fields in body converted it into dict and stored in variable name body
-    print(post)
-    return {"new post": f"title :{post['title']} content:{post['content']}"}
+# @app.post("/create_post")
+# def create_post(post: dict=Body(...)): #post:dict=Body(...) it fetch all fields in body converted it into dict and stored in variable name body
+#     print(post)
+#     return {"new post": f"title :{post['title']} content:{post['content']}"}
 
 
 
@@ -99,23 +99,23 @@ def create_post(post: dict=Body(...)): #post:dict=Body(...) it fetch all fields 
 
 
 # creating demo database in form of array
-my_posts=[{"title":"my first post","content":"This is my first post","id":7},
-          {"title":"my second post","content":"This is my second post","id":8},
-          {"title":"my third post","content":"This is my third post","id":9}]
-# -==============================================================================================================
+# my_posts=[{"title":"my first post","content":"This is my first post","id":7},
+#           {"title":"my second post","content":"This is my second post","id":8},
+#           {"title":"my third post","content":"This is my third post","id":9}]
+# # -==============================================================================================================
 
-# defining function to fetch post by id
-def find_post(id):
-    for p in my_posts:
-        if p['id']==id:
-            return p
-# -==============================================================================================================
+# # defining function to fetch post by id
+# def find_post(id):
+#     for p in my_posts:
+#         if p['id']==id:
+#             return p
+# # -==============================================================================================================
 
-# finding index of post to delete post
-def index_post(id):
-    for i,p in enumerate(my_posts):
-        if p['id']==id:
-            return i
+# # finding index of post to delete post
+# def index_post(id):
+#     for i,p in enumerate(my_posts):
+#         if p['id']==id:
+#             return i
 # -==============================================================================================================
     
 # #  creating function for getting latest post
