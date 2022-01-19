@@ -35,7 +35,7 @@ app.add_middleware(
 )
 
 
-@app.get("")
+@app.get("/")
 def main():
     return {"message": "Hello World"}
 
