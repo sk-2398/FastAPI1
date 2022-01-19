@@ -35,9 +35,9 @@ app.add_middleware(
 )
 
 
-@app.get("/")
-def main():
-    return {"message": "Hello World"}
+# @app.get("/")
+# def main():
+#     return {"message": "Hello World"}
 
 
 
@@ -50,9 +50,9 @@ app.include_router(vote.router)
 
 
 
-# @app.get("/")
-# def root():
-#     return {"message": "Hello suyog"}
+@app.get("/")
+def root():
+    return {"message": "Hello suyog"}
 
 # #creating get request /now is the url
 # @app.get("/new")
