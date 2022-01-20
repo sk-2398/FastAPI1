@@ -40,4 +40,4 @@ while True:
     except Exception as error:
         print("Database connection failed")
         print(error)
-        time.sleep(60)
+        time.sleep(120)
