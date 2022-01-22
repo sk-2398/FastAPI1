@@ -31,13 +31,13 @@ def get_db():
         db.close()
 # ==================================================================================================
 # connecting to database
-while True:
-    try:
-        conn=psycopg2.connect(host='localhost',database='fastAPI',user='postgres',password='suyog123',cursor_factory=RealDictCursor)
-        cursor=conn.cursor()
-        print("Database connection Successfull")
-        break
-    except Exception as error:
-        print("Database connection failed")
-        print(error)
-        time.sleep(2)
+# while True:
+#     try:
+#         conn=psycopg2.connect(host='localhost',database='newdb',user='postgres',password='suyog123',cursor_factory=RealDictCursor)
+#         cursor=conn.cursor()
+#         print("Database connection Successfull")
+#         break
+#     except Exception as error:
+#         print("Database connection failed")
+#         print(error)
+#         time.sleep(60)
